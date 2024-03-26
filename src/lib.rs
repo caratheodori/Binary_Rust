@@ -44,6 +44,13 @@ impl Binary<Matrix<Complex<f64>>> for QuBinary{
         }
     }
 }
+
+impl Clone for QuBinary {
+    fn clone(&self) -> QuBinary{
+        QuBinary{state: self.state.clone()}
+    }
+} 
+
 pub struct NomarlBinary<T>{
     state: Vec<T>
 }
